@@ -8,64 +8,66 @@
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/data.js"></script>
   </head>
-  <body>
+  <body class="theme">
     <!-- you need to implement -->
     <main class="main_container">
       <h1>Manage Your Tasks</h1>
       <nav class="overview">
-        <section class="all_tasks">
-          <div>
+        <section class="tasks all_tasks">
+          <div class="statistics_left">
             <h3>All Tasks</h3>
             <p>1</p>
           </div>
-          <div></div>
+          <div class="statistics_right"></div>
         </section>
-        <section class="active_tasks">
-          <div>
+        <section class="tasks active_tasks">
+          <div class="statistics_left">
             <h3>Active Tasks</h3>
             <p>1</p>
           </div>
-          <div>100%</div>
+          <div class="statistics_right">100%</div>
         </section>
-        <section class="padding_tasks">
-          <div>
+        <section class="tasks padding_tasks">
+          <div class="statistics_left">
             <h3>Padding Tasks</h3>
             <p>1</p>
           </div>
-          <div>100%</div>
+          <div class="statistics_right">100%</div>
         </section>
-        <section class="closed_tasks">
-          <div>
+        <section class="tasks closed_tasks">
+          <div class="statistics_left">
             <h3>Closed Tasks</h3>
             <p>1</p>
           </div>
-          <div>100%</div>
+          <div class="statistics_right">100%</div>
         </section>
       </nav>
       <article class="tasks_container">
-        <section>
-          <h2>Your Tasks List</h2>
+        <section class="title_bar">
+          <h2 class="task_list_title">Your Tasks List</h2>
           <p class="tools">
-            <input type="text" placeholder="Please enter task name to search" />
-            <button><img src="./images/search.svg" alt="search" id="search"></button>
-            <button><img src="./images/add.svg" alt="add" id="add"></button>
+            <input type="text" placeholder="Please enter task name to search" class="search_input" />
+            <button class="search_button"><img src="./images/search.svg" alt="search" id="search"></button>
+            <button class="add_button"><img src="./images/add.svg" alt="add" id="add"></button>
           </p>
         </section>
-        <table class="tasks_data_container">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Task Name</th>
-              <th>Task Description</th>
-              <th>Deadline</th>
-              <th>Status</th>
-              <th>Operation</th>
-            </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
+        <section class="task_list">
+          <table class="tasks_data_container">
+            <thead class="task_header">
+              <tr class="task_row">
+                <th class="task_num_col">#</th>
+                <th class="task_name_col">Task Name</th>
+                <th class="task_des_col">Task Description</th>
+                <th class="task_deadline_col">Deadline</th>
+                <th class="task_status_col">Status</th>
+                <th class="task_operation_col">Operation</th>
+              </tr>
+            </thead>
+            <tbody class="task_body">
+  
+            </tbody>
+          </table>
+        </section>
       </article>
     </main>
   </body>
