@@ -69,6 +69,35 @@
           </table>
         </section>
       </article>
+
     </main>
+    <article class="modal">
+      <section class="popover">
+        <header class="modal_title">
+          <img src="./images/modal_add_icon.svg" alt="modal_add" />
+          <h2>New A Task</h2>
+          <button class="btn_icon">
+            <img src="./images/modal_cancel_icon.svg" alt="modal_cancel" />
+          </button>
+        </header>
+        <section class="modal_container">
+          <label>
+            <p>Name</p>
+            <input type="text"></label>
+          <label>
+            <p>Deadline</p>
+            <input type="text"></label>
+          <label>
+            <p>Description</p>
+            <!-- maxlength="200" 最大长度 -->
+            <textarea name="task_description" rows="5" maxlength="200" 
+            placeholder="Please enter task descript, Maximum 200 characters"></textarea>
+        </section>
+        <footer class="modal_footer">
+          <button class="modal_btn_cancel">取消</button>
+          <button class="modal_btn_ok">确认</button>
+        </footer class="modal_footer">
+      </section>
+    </article>
   </body>
 </html>
