@@ -47,8 +47,8 @@
           <h2 class="task_list_title">Your Tasks List</h2>
           <p class="tools">
             <input type="text" placeholder="Please enter task name to search" class="search_input" />
-            <button class="search_button"><img src="./images/search.svg" alt="search" id="search"></button>
-            <button class="add_button"><img src="./images/add.svg" alt="add" id="add"></button>
+            <button class="search_button" id="search_btn"><img src="./images/search.svg" alt="search" id="search"></button>
+            <button class="add_button" id="add_btn"><img src="./images/add.svg" alt="add" id="add"></button>
           </p>
         </section>
         <section class="task_list">
@@ -71,31 +71,31 @@
       </article>
 
     </main>
-    <article class="modal">
+    <article class="modal" id="modal">
       <section class="popover">
         <header class="modal_title">
           <img src="./images/modal_add_icon.svg" alt="modal_add" />
           <h2>New A Task</h2>
-          <button class="btn_icon">
+          <button class="btn_icon" id="btn_icon">
             <img src="./images/modal_cancel_icon.svg" alt="modal_cancel" />
           </button>
         </header>
         <section class="modal_container">
           <label>
             <p>Name</p>
-            <input type="text"></label>
+            <input type="text" id="task_name"></label>
           <label>
             <p>Deadline</p>
-            <input type="text"></label>
+            <input type="text" id="task_deadline"></label>
           <label>
             <p>Description</p>
             <!-- maxlength="200" 最大长度 -->
-            <textarea name="task_description" rows="5" maxlength="200" 
+            <textarea name="task_description" rows="5" maxlength="200" id="task_description"
             placeholder="Please enter task descript, Maximum 200 characters"></textarea>
         </section>
         <footer class="modal_footer">
-          <button class="modal_btn_cancel">取消</button>
-          <button class="modal_btn_ok">确认</button>
+          <button class="modal_btn_cancel" id="modal_btn_cancel">取消</button>
+          <button class="modal_btn_ok" id="modal_btn_ok">确认</button>
         </footer class="modal_footer">
       </section>
     </article>
