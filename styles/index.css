@@ -166,7 +166,7 @@ button {
 
 .task_des_col {
   width: 45%;
-  
+  overflow: hidden;
 }
 
 .task_deadline_col {
@@ -179,6 +179,7 @@ button {
 
 .task_operation_col {
   width: 8%;
+  display: flex;
 }
 
 .modal {
@@ -266,4 +267,18 @@ button {
   background-color: #3080fe;
   margin-left: 10px;
   color: #fff;
+}
+
+.task_operation_col button {
+  border: none;
+  background: none;
+}
+
+.task_operation_col img {
+  width: 16px;
+  height: 16px;
+}
+
+#task_body_row {
+  display: none;
 }
