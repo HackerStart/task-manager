@@ -1,1 +1,284 @@
-/* you need to implement */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.theme {
+  background-image: url(../images/bg.gif);
+  background-size: cover;
+  font-family: serif, 'Microsoft Yahei'
+}
+
+.main_container {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  height: 85%;
+}
+
+h1 {
+  text-align: center;
+}
+.overview {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tasks {
+  display: flex;
+  width: 23%;
+  height: 80px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;  /*背景色混合模式*/
+  background-position: center center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.statistics_left {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.statistics_left h3,
+.statistics_left p {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.statistics_left p {
+  font-size: 32px;
+}
+
+.statistics_right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.all_tasks {
+  background-image: url(../images/all_tasks_bg.jpg);
+  background-size: cover;
+}
+
+.active_tasks {
+  background-image: url(../images/active_task_bg.svg);
+  background-size: cover;
+}
+
+.padding_tasks {
+  background-image: url(../images/padding_tasks_bg.svg);
+  background-size: cover;
+}
+
+.closed_tasks {
+  background-image: url(../images/closed_tasks_bg.svg);
+  background-size: cover;
+}
+
+.title_bar {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* justify-content: space-around; */
+}
+
+.task_list_title {
+  flex-grow: 1;
+}
+
+.tools {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.search_input {
+  width: 240px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid black;
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+input {
+  outline: none;  /* 轮廓属性 */
+}
+
+.search_button {
+  margin-right: 20px;
+}
+
+.search_button,
+.add_button {
+  padding: 5px 10px 2px 10px;
+  border-radius: 15px;
+  border: 1px solid #308169;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+.task_list {
+  margin: 0 10px;
+}
+
+.tasks_data_container {
+  width: 100%;
+}
+.task_header {
+  background-color: #ebecf0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.task_row {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 10px;
+  text-align: left;
+}
+
+.task_num_col {
+  width: 5%;
+}
+
+.task_name_col {
+  width: 16%;
+}
+
+.task_des_col {
+  width: 45%;
+  overflow: hidden;
+}
+
+.task_deadline_col {
+  width: 14%;
+}
+
+.task_status_col {
+  width: 12%;
+}
+
+.task_operation_col {
+  width: 8%;
+  display: flex;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;  /*none-flex切换*/
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popover {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 400px;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.modal_title {
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.modal_title img {
+  flex-grow: 1;
+  height: 26px;
+  width: 26px;
+}
+
+.modal_title h2 {
+  flex-grow: 8;
+  margin: 0;
+}
+
+.btn_icon {
+  border: none;
+  background: none;
+}
+
+
+.modal_container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 15px;
+  border-top: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+}
+
+.modal_container input,
+.modal_container textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 0;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  outline: none;
+  font-size: 15px;
+}
+
+.modal_container p {
+  margin: 15px 0 5px 0;
+  font-size: 20px;
+}
+
+.modal_footer {
+  padding-top: 10px;
+  text-align: right;
+  
+}
+
+.modal_footer button {
+  font-size: 15px;
+  border: 1px solid #ced4da;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.modal_btn_ok {
+  background-color: #3080fe;
+  margin-left: 10px;
+  color: #fff;
+}
+
+.task_operation_col button {
+  border: none;
+  background: none;
+}
+
+.task_operation_col img {
+  width: 16px;
+  height: 16px;
+}
+
+#task_body_row {
+  display: none;
+}

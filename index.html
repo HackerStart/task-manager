@@ -8,7 +8,106 @@
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/data.js"></script>
   </head>
-  <body>
+  <body class="theme">
     <!-- you need to implement -->
+    <main class="main_container">
+      <h1>Manage Your Tasks</h1>
+      <nav class="overview">
+        <section class="tasks all_tasks">
+          <div class="statistics_left">
+            <h3>All Tasks</h3>
+            <p id="all_tasks_count"></p>
+          </div>
+          <div class="statistics_right"><p id="all_tasks_percent"></p></div>
+        </section>
+        <section class="tasks active_tasks">
+          <div class="statistics_left">
+            <h3>Active Tasks</h3>
+            <p id="active_tasks_count">1</p>
+          </div>
+          <div class="statistics_right"><p id="active_tasks_percent"></p></div>
+        </section>
+        <section class="tasks padding_tasks">
+          <div class="statistics_left">
+            <h3>Padding Tasks</h3>
+            <p id="padding_tasks_count">1</p>
+          </div>
+          <div class="statistics_right"><p id="padding_tasks_percent"></p></div>
+        </section>
+        <section class="tasks closed_tasks">
+          <div class="statistics_left">
+            <h3>Closed Tasks</h3>
+            <p id="closed_tasks_count">1</p>
+          </div>
+          <div class="statistics_right"><p id="closed_tasks_percent"></p></div>
+        </section>
+      </nav>
+      <article class="tasks_container">
+        <section class="title_bar">
+          <h2 class="task_list_title">Your Tasks List</h2>
+          <p class="tools">
+            <input type="text" placeholder="Please enter task name to search" class="search_input" />
+            <button class="search_button" id="search_btn"><img src="./images/search.svg" alt="search" id="search"></button>
+            <button class="add_button" id="add_btn"><img src="./images/add.svg" alt="add" id="add"></button>
+          </p>
+        </section>
+        <section class="task_list">
+          <table class="tasks_data_container">
+            <thead class="task_header">
+              <tr class="task_row">
+                <th class="task_num_col">#</th>
+                <th class="task_name_col">Task Name</th>
+                <th class="task_des_col">Task Description</th>
+                <th class="task_deadline_col">Deadline</th>
+                <th class="task_status_col">Status</th>
+                <th class="task_operation_col">Operation</th>
+              </tr>
+            </thead>
+            <tbody class="task_body" id="task_body">
+              <tr class="task_row" id="task_body_row">
+                <td class="task_num_col">1</td>
+                <td class="task_name_col">Task Name</td>
+                <td class="task_des_col">Task Description</td>
+                <td class="task_deadline_col">Deadline</td>
+                <td class="task_status_col"></td>
+                <td class="task_operation_col">
+                  <button><img src="images/modal_delete_icon.svg" alt="modal_delete" /></button>
+                  <button><img src="images/update.svg" alt="update" /></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+
+    </main>
+    <article class="modal" id="modal">
+      <section class="popover">
+        <header class="modal_title">
+          <img src="./images/modal_add_icon.svg" alt="modal_add" />
+          <h2>New A Task</h2>
+          <button class="btn_icon" id="btn_icon">
+            <img src="./images/modal_cancel_icon.svg" alt="modal_cancel" />
+          </button>
+        </header>
+        <section class="modal_container">
+          <label>
+            <p>Name</p>
+            <input type="text" id="task_name"></label>
+          <label>
+            <p>Deadline</p>
+            <input type="text" id="task_deadline"></label>
+          <label>
+            <p>Description</p>
+            <!-- maxlength="200" 最大长度 -->
+            <textarea name="task_description" rows="5" maxlength="200" id="task_description"
+            placeholder="Please enter task descript, Maximum 200 characters"></textarea>
+        </section>
+        <footer class="modal_footer">
+          <button class="modal_btn_cancel" id="modal_btn_cancel">取消</button>
+          <button class="modal_btn_ok" id="modal_btn_ok">确认</button>
+        </footer class="modal_footer">
+      </section>
+    </article>
   </body>
 </html>
